@@ -4,16 +4,23 @@ resources:
   repositories:
   - repository: self
     clean: true
-  - repository: SdkBuildScripts
+  - repository: v-davidcho/tools-agent-test
     clean: true
-    name: SdkBuildScripts
+    name: v-davidcho/tools-agent-test
     type: git
 
-trigger:
-  branches:
-    include:
-    - main
-    - prerelease
+ # - repository: SdkBuildScripts
+ #   clean: true
+ #   name: SdkBuildScripts
+ #   type: git
+
+trigger: none
+
+# trigger:
+#   branches:
+#     include:
+#     - main
+#     - prerelease
 
 extends:
   template: builds/azure-sphere-tools/templates/azure-sphere-tools.yml@SdkBuildScripts
